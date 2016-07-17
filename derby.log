@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Sat Jul 16 22:05:40 BRT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0155-f663-22b5-0000093fa558 
+on database directory C:\Users\Leo\workspace\MasterChef2\db with class loader WebappClassLoader
+  context: /MasterChef2
+  delegate: false
+  repositories:
+----------> Parent Classloader:
+ClassRealm[plugin>org.apache.tomcat.maven:tomcat7-maven-plugin:2.2, parent: sun.misc.Launcher$AppClassLoader@18b4aac2]
+ 
+Loaded from file:/C:/Users/Leo/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_92-b14
+user.dir=C:\Users\Leo\workspace\MasterChef2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
