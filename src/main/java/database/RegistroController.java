@@ -57,12 +57,7 @@ public class RegistroController extends HttpServlet {
 					// Fechar sentença.
 					pstmt.close();
 					// Fechar conexão.
-					conn.close();*/
-						
-			
-			
-			
-			
+					conn.close();*/			
 			
 			req.getRequestDispatcher("RegistroView.jsp").forward(req, resp);
 		} catch (Exception e) {

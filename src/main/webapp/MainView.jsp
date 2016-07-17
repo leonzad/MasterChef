@@ -253,6 +253,7 @@
                               <h2>Login</h2>
                               <img class="dividerline" src="img/sep.png" alt="">
                               <h3>Agora que você já está por dentro das novidades, que tal aproveitar e fazer um pedido?</h3>
+                              <br>
                               <a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="btn btn-primary btn-lg sharp">Login</a>
                            </div>
                         </div>

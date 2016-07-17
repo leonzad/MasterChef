@@ -10,20 +10,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /*
-
-create table aluno (
-  matricula int,
-  nome varchar(255)
-)
-
-create table produto(
- qtd int,
- nome varchar(50)
+create table registro (
+ usuario varchar(30),
+ senha varchar(30),
+ role varchar(30)
  )
-
+ 
+ create table contato (
+	nome varchar(50),
+	email varchar(50),
+	msg varchar(1024)
+ )
+ 
+ insert into registro values('admin','123','gerente')  
+ SELECT tablename FROM sys.systables where TABLETYPE <> 'S'
+ 
+Apagando todas as linhas da tabela...
+DELETE FROM TABLENAME WHERE 1=1
 */
-@WebServlet("/produto")
-public class ProdutoController extends HttpServlet {
+
+@WebServlet("/cliente")
+public class ClienteController extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
 
 	private String valor(HttpServletRequest req, String param, String padrao) {
 		String result = req.getParameter(param);
@@ -33,26 +42,23 @@ public class ProdutoController extends HttpServlet {
 		return result;
 	}
 
-	private int toInt(HttpServletRequest req, String param, String padrao) {
-		return Integer.parseInt(valor(req, param, padrao));
-	}
-
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
 			String msg;
 			String op = valor(req, "operacao", "");
-			int qtd = toInt(req, "qtd", "0");
-			String nome = valor(req, "nome", "");
+			//int qtd = toInt(req, "qtd", "0");
+			String usuario = valor(req, "nome", "");
+			String senha = valor(req, "senha", "");
 			if (op.equals("incluir")) {
-				ProdutoDao.inclui(qtd, nome);
+				ClienteDao.inclui(usuario, senha);
 				msg = "Inclusão realizada com sucesso.";
 			} else if (op.equals("alterar")) {
-				ProdutoDao.alterar(qtd, nome);
+				ClienteDao.alterar(usuario, senha);
 				msg = "Alteração realizada com sucesso.";
 			} else if (op.equals("excluir")) {
-				ProdutoDao.excluir(qtd);
-				resp.sendRedirect("produto");
+				ClienteDao.excluir(usuario);
+				resp.sendRedirect("cliente");
 				msg = "Exclusão realizada com sucesso.";
 			} else if (op.equals("")) {
 				msg = "";
@@ -62,10 +68,10 @@ public class ProdutoController extends HttpServlet {
 			
 			req.setAttribute("msg", msg);
 
-			List<Produto> produtos = ProdutoDao.listar();
-			req.setAttribute("produtos", produtos);
+			List<Cliente> clientes = ClienteDao.listar();
+			req.setAttribute("clientes", clientes);
 			
-			req.getRequestDispatcher("ProdutoView.jsp").forward(req, resp);
+			req.getRequestDispatcher("ClienteView.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace(resp.getWriter());
 		}
