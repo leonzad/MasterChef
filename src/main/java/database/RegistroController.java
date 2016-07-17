@@ -39,7 +39,7 @@ public class RegistroController extends HttpServlet {
 			
 			if (op.equals("registro")) {
 				RegistroDao.inclui(usuario, senha);
-				resp.sendRedirect("login");
+				resp.sendRedirect("main");
 			}
 			
 			/*String msg = "";
@@ -59,7 +59,7 @@ public class RegistroController extends HttpServlet {
 					// Fechar conexão.
 					conn.close();*/			
 			
-			req.getRequestDispatcher("RegistroView.jsp").forward(req, resp);
+			req.getRequestDispatcher("RegistroView2.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace(resp.getWriter());
 		}
