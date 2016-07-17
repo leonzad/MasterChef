@@ -14,24 +14,29 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /*
-create table registro (
+ create table registro (
   usuario varchar(30),
   senha varchar(30),
   role varchar(30)
+  )
   
   create table contato (
 	nome varchar(50),
 	email varchar(50),
 	msg varchar(1024)
-)
+  )
   
-  
-)
+  insert into registro values('admin','123','gerente')  
+
 */
 
 @WebServlet("/main")
 public class LoginController extends HttpServlet {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final String URL = "jdbc:derby:db;create=true";
 
 	private String valor(HttpServletRequest req, String param, String padrao) {
@@ -40,10 +45,6 @@ public class LoginController extends HttpServlet {
 			result = padrao;
 		}
 		return result;
-	}
-
-	private int toInt(HttpServletRequest req, String param, String padrao) {
-		return Integer.parseInt(valor(req, param, padrao));
 	}
 
 	@Override

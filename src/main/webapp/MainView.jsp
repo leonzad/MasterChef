@@ -87,7 +87,7 @@
                                     <div class="content">
                                        <div class="error"></div>
                                        <div class="form loginBox">
-                id="entra" action="controller" <form method="post">
+                						<form method="post">
                                              <div class="input-with-icon success-control">  
                                                 <input type="text" class="form-control" name="usuario" placeholder="Login"><br/>
                                              </div>
@@ -95,13 +95,17 @@
                                                 <input type="password" class="form-control" name="senha" placeholder="Senha"><br/>
                                              </div>
                                            <button name="operacao" value="entrar" class="btn btn-danger"><i class="fa fa-user"></i>Login</button>
+                                           <button name="operacao" value="entrar" class="btn btn-primary">Login</button>
+                                           <br>
+                                           <br>
+                                            <b>${msg}</b>
                                              <!-- input type="hidden" name="command" value="login"/-->
                                           </form>
-                                          <script type="text/javascript">
+                                          <!--script type="text/javascript">
                                              function form_submit() {
                                                document.getElementById("entra").submit();
                                               }    
-                                          </script>
+                                          </script-->
                                        </div>
                                     </div>
                                  </div>
