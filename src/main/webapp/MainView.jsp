@@ -35,6 +35,7 @@
                   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
                   <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
                   <link rel="stylesheet" href="css/theme.css" type="text/css"/>
+                    
                </head>
                <body>
                   <!--wrapper start-->
@@ -94,8 +95,8 @@
                                              <div class="input-with-icon success-control">  
                                                 <input type="password" class="form-control" name="senha" placeholder="Senha"><br/>
                                              </div>
-                                           <button name="operacao" value="entrar" class="btn btn-danger"><i class="fa fa-user"></i>Login</button>
-                                           <button name="operacao" value="entrar" class="btn btn-primary">Login</button>
+                                           <button name="operacao" value="entrar" class="btn btn-danger"><i class="fa fa-user"></i> Login</button>
+                       
                                            <br>
                                            <br>
                                             <b>${msg}</b>
@@ -252,8 +253,7 @@
                               <h2>Login</h2>
                               <img class="dividerline" src="img/sep.png" alt="">
                               <h3>Agora que você já está por dentro das novidades, que tal aproveitar e fazer um pedido?</h3>
-                              <a href="#" class="btn btn-primary btn-lg sharp">Login</a>
-                              <button type="button" class="btn btn-primary btn-lg sharp">Sharp</button>
+                              <a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="btn btn-primary btn-lg sharp">Login</a>
                            </div>
                         </div>
                      </section>
@@ -277,11 +277,11 @@
                                     Sua mensagem
                                  </div>
                               </div>
-                              <form method="post" action="contact.php" id="contactform">
-                                 <input name="name" type="text" class="contact col-md-6" placeholder="Nome" >
-                                 <input name="email" type="email" class="contact noMarr col-md-6" placeholder="E-mail" >
-                                 <textarea name="comment" class="contact col-md-12" placeholder="Mensagem"></textarea>
-                                 <input type="submit" id="submit" class="contact submit" value="Enviar mensagem!">
+                              <form method="post">
+                                 <input name="nome" type="text" class="contact col-md-6"  placeholder="Nome" >
+                                 <input name="email" type="email" class="contact noMarr col-md-6" placeholder="E-mail">
+                                 <textarea name="msg1" class="contact col-md-12" placeholder="Mensagem"></textarea>
+                                 <button name="operacao" value="feed" class="btn btn-primary"><i class="fa fa-envelope" aria-hidden="true"></i> Enviar Mensagem!</button>
                               </form>
                            </div>
                         </div>

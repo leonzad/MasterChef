@@ -27,7 +27,10 @@ import javax.servlet.http.HttpSession;
   )
   
   insert into registro values('admin','123','gerente')  
-
+  SELECT tablename FROM sys.systables where TABLETYPE <> 'S'
+  
+ Apagando todas as linhas da tabela...
+ DELETE FROM TABLENAME WHERE 1=1
 */
 
 @WebServlet("/main")
@@ -53,6 +56,9 @@ public class LoginController extends HttpServlet {
 			String msg = "";
 			String op = valor(req, "operacao", "");
 			String usuario = valor(req, "usuario", "");
+			String nome = valor(req, "nome", "");
+			String email = valor(req, "email", "");
+			String msg1 = valor(req, "msg1", "");
 			String senha = valor(req, "senha", "");
 			// Abrir uma conexão com o banco de dados.
 						Connection conn = DriverManager.getConnection(URL);
@@ -68,7 +74,21 @@ public class LoginController extends HttpServlet {
 							resp.sendRedirect("/MasterChef2/registro");
 						}
 						
-						
+						else if (op.equals("feed")) {
+							// Abrir uma conexão com o banco de dados.
+							Connection conn2 = DriverManager.getConnection(URL);
+							// Executar instrução SQL.
+							String sql = "insert into contato (nome, email, msg) values (?, ?, ?)";
+							PreparedStatement pstmt = conn2.prepareStatement(sql);
+							pstmt.setString(1, nome);
+							pstmt.setString(2, email);
+							pstmt.setString(3, msg1);
+							pstmt.executeUpdate();
+							// Fechar sentença.
+							pstmt.close();
+							// Fechar conexão.
+							conn2.close();						
+						}
 						else if (op.equals("entrar")) {
 							if(rs.next()){
 								//É de verdade.
