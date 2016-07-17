@@ -107,6 +107,7 @@
 									<ul class="nav navbar-nav">
 										<li class="menuItem active"><a href="#wrapper">Home</a></li>
 										<li class="menuItem"><a href="#gallery">Nossas Delícias</a></li>
+										<li class="menuItem"><a href="logout">Logout</a></li>
 									</ul>
 								</div>
 							</div>

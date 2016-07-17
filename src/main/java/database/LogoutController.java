@@ -20,6 +20,6 @@ public class LogoutController extends HttpServlet {
 		// Eliminar a sessão no servidor.
 		session.invalidate();
 
-		resp.sendRedirect("login");
+		resp.sendRedirect("main");
 	}
 }
