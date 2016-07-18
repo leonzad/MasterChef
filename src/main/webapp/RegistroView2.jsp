@@ -51,32 +51,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="menu">
-                           <div class="navbar-wrapper">
-                              <div class="container">
-                                 <div class="navwrapper">
-                                    <div class="navbar navbar-inverse navbar-static-top">
-                                       <div class="container">
-                                          <div class="navArea">
-                                             <div class="navbar-collapse collapse">
-                                                <ul class="nav navbar-nav">
-                                                   <li class="menuItem active"><a href="#wrapper">Home</a></li>
-                                                   <li class="menuItem"><a href="#aboutus">Sobre a casa</a></li>
-                                                   <li class="menuItem"><a href="#specialties">Especialidades</a></li>
-                                                   <!-- li class="menuItem"><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Login</a></li-->
-                                                   <li class="menuItem"><a href="#contact">Contato</a></li>
-                                                </ul>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
                      </header>
-
-
 
 <div  class="container">
   <h2>Registre-se</h2>

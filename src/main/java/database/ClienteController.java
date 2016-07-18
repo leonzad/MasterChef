@@ -22,6 +22,12 @@ create table registro (
 	msg varchar(1024)
  )
  
+ create table pedido(
+  prato varchar(30),
+  preco varchar(15)
+  mesa varchar(10)
+  )
+ 
  insert into registro values('admin','123','gerente')  
  SELECT tablename FROM sys.systables where TABLETYPE <> 'S'
  
@@ -45,11 +51,12 @@ public class ClienteController extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		try {
-			String msg;
+			String msg = null;
 			String op = valor(req, "operacao", "");
 			//int qtd = toInt(req, "qtd", "0");
 			String usuario = valor(req, "nome", "");
 			String senha = valor(req, "senha", "");
+			String pedido = valor(req, "pedido", "");
 			if (op.equals("incluir")) {
 				ClienteDao.inclui(usuario, senha);
 				msg = "Inclusão realizada com sucesso.";
@@ -60,6 +67,8 @@ public class ClienteController extends HttpServlet {
 				ClienteDao.excluir(usuario);
 				resp.sendRedirect("cliente");
 				msg = "Exclusão realizada com sucesso.";
+			} else if (op.equals("pedido")){
+				PedidoDao.inclui(pedido);
 			} else if (op.equals("")) {
 				msg = "";
 			} else {

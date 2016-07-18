@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!-- DOCTYPE html>
 <%@page import="database.Produto"%>
 <%@page import="java.util.List"%>
-<html>
 
 <head>
 <title>Produto</title>
@@ -100,4 +99,4 @@
 </form>   
 </body>
 
-</html>
+</html-->

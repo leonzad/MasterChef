@@ -282,10 +282,11 @@
                                  </div>
                               </div>
                               <form method="post">
-                                 <input name="nome" type="text" class="contact col-md-6"  placeholder="Nome" >
+                                 <input name="nome" type="text" class="contact col-md-6"  placeholder="Nome">
                                  <input name="email" type="email" class="contact noMarr col-md-6" placeholder="E-mail">
                                  <textarea name="msg1" class="contact col-md-12" placeholder="Mensagem"></textarea>
-                                 <button name="operacao" value="feed" class="btn btn-primary"><i class="fa fa-envelope" aria-hidden="true"></i> Enviar Mensagem!</button>
+                                 <button onclick="alert('Mensagem enviada com sucesso. Agradecemos pelo seu feedback!');" name="operacao" value="feed" class="btn btn-primary"><i class="fa fa-envelope" aria-hidden="true"></i> Enviar Mensagem!</button>
+                                 
                               </form>
                            </div>
                         </div>
@@ -297,8 +298,8 @@
                         </p>
                         <div class="container">
                            <ul>
-                              <li><a href="http://twitter.com/caionaweb"><i class="fa fa-twitter"></i></a></li>
-                              <li><a href="http://fb.com/caionaweb"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="http://fb.com/"><i class="fa fa-facebook"></i></a></li>
                            </ul>
                         </div>
                      </section>
