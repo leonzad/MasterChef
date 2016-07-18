@@ -75,23 +75,23 @@
       </tr>
     </thead>
     <tbody>
-	  <%
-      //Obtém a lista de alunos criada pelo controlador.
-  	List<Produto> produtos =
-      (List<Produto>) request.getAttribute("produtos");
+	  <!--  %
+      Obtém a lista de alunos criada pelo controlador.
+  	//List<Produto> produtos =
+     //(List<Produto>) request.getAttribute("produtos");
 
-    if (produtos != null && !produtos.isEmpty()) {
-      for (Produto a : produtos) {
-    %>
+//    if (produtos != null && !produtos.isEmpty()) {
+  //    for (Produto a : produtos) {
+    %
     <tr>
-      <td><%=a.getQtd()%></td>
-      <td><%=a.getNome()%></td>
-      <td><a href="produto?operacao=excluir&qtd=<%=a.getQtd()%>">Excluir</a></td>
+      <td><%//=a.getQtd()%></td>
+      <td><%//=a.getNome()%></td>
+      <td><a href="produto?operacao=excluir&qtd=<%//=a.getQtd()%>">Excluir</a></td>
     </tr>
-    <%
+    %
       }
     }
-    %>
+    %>-->
  
     </tbody>
   </table>
