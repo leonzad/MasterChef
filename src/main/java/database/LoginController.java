@@ -15,9 +15,10 @@ import javax.servlet.http.HttpSession;
 
 /*
  create table registro (
+  nome varchar(30),
+  email varchar(30),
   usuario varchar(30),
-  senha varchar(30),
-  role varchar(30)
+  senha varchar(30)
   )
   
   create table contato (
@@ -70,7 +71,6 @@ public class LoginController extends HttpServlet {
 						//Verificação	
 						
 						if (op.equals("registro")){
-							//req.getRequestDispatcher("/registro").forward(req,resp);
 							resp.sendRedirect("/MasterChef2/registro");
 						}
 						

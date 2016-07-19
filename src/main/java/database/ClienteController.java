@@ -35,7 +35,7 @@ DELETE FROM TABLENAME WHERE 1=1
 */
 
 @WebServlet("/pedido")
-public class PedidoController extends HttpServlet {
+public class ClienteController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 

@@ -36,9 +36,12 @@ public class RegistroController extends HttpServlet {
 			String op = valor(req, "operacao", "");
 			String usuario = valor(req, "usuario", "");
 			String senha = valor(req, "senha", "");
+			String nome = valor(req, "nome", "");
+            String sobrenome = valor(req, "sobrenome", "");
+            String email = valor(req, "email","");
 			
 			if (op.equals("registro")) {
-				RegistroDao.inclui(usuario, senha);
+				RegistroDao.inclui(nome, email, usuario, senha);
 				resp.sendRedirect("main");
 			}
 			

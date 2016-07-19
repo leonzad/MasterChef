@@ -53,24 +53,47 @@
                         </div>
                      </header>
 
-<div  class="container">
+<div class="container">
   <h2>Registre-se</h2>
   <form class="form-horizontal" role="form">
+   <div class="form-group">
+      <label class="control-label col-sm-2" for="usuario">Nome Completo:</label>
+      <div class="col-sm-4">
+        <input type="text" name="nome" class="form-control" placeholder="Walison Moreira" required>
+      </div>
+    </div>
     <div class="form-group">
-      <label class="control-label col-sm-1" for="usuario">Usuário:</label>
+      <label class="control-label col-sm-2" for="usuario">E-mail:</label>
+      <div class="col-sm-4">
+        <input type="text" name="email" class="form-control" placeholder="walison@inf.ufg.br" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="usuario">Usuário:</label>
       <div class="col-sm-4">
         <input type="text" name="usuario" class="form-control" placeholder="walison" required>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-1" for="senha">Senha:</label>
+      <label class="control-label col-sm-2" for="senha">Senha:</label>
       <div class="col-sm-4">
         <input type="password" class="form-control" name="senha" placeholder="123" required>
       </div>
     </div>
     <div class="form-group">
       <div class="col-sm-offset-1 col-sm-4">
+      <br>
         <button name="operacao" value="registro" class="btn btn-success">Registrar</button>
+        
+        <div class=" container">
+<div class=" register">
+	
+		  	  
+</div>
+        
+        
+        
+        
        
       </div>
     </div>

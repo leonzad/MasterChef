@@ -15,14 +15,16 @@ public class RegistroDao {
 	
 	private static final String URL = "jdbc:derby:db;create=true";
 
-	public static void inclui(String usuario, String senha) throws SQLException {
+	public static void inclui(String nome, String email, String usuario, String senha) throws SQLException {
 		// Abrir uma conexão com o banco de dados.
 		Connection conn = DriverManager.getConnection(URL);
 		//Query no BD procurando usuário e senha cadastrados
-			String sql = "insert into registro (usuario, senha) values (?,?)";
+			String sql = "insert into registro (nome, email, usuario, senha) values (?,?,?,?)";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, usuario);
-			pstmt.setString(2, senha);
+			pstmt.setString(1, nome);
+			pstmt.setString(2, email);
+			pstmt.setString(3, usuario);
+			pstmt.setString(4, senha);
 			pstmt.executeUpdate();
 			// Fechar sentença.
 			pstmt.close();
