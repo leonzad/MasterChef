@@ -31,4 +31,33 @@ public class RegistroDao {
 			// Fechar conexão.
 			conn.close();
 	}
+
+	public static List<Cliente> listar() throws SQLException {
+		// Abrir uma conexão com o banco de dados.
+		Connection conn = DriverManager.getConnection(URL);
+		// Executar instrução SQL.
+		String sql = "select nome, email, usuario, senha from registro";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		// Represneta o resultado da execução.
+		ResultSet rs = pstmt.executeQuery();
+		
+		List<Cliente> clientes = new ArrayList<>();
+		while (rs.next()) {
+			String nome = rs.getString("nome");
+			String email = rs.getString("email");
+			String usuario = rs.getString("usuario");
+			String senha = rs.getString("senha");
+			Cliente cliente = new Cliente(nome, email, usuario, senha);
+			clientes.add(cliente);
+		}
+	
+		// Fechar resultado.
+		rs.close();
+		// Fechar sentença.
+		pstmt.close();
+		// Fechar conexão.
+		conn.close();
+		
+		return clientes;
+	}
 }

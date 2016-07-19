@@ -34,7 +34,7 @@ Apagando todas as linhas da tabela...
 DELETE FROM TABLENAME WHERE 1=1
 */
 
-@WebServlet("/pedido")
+@WebServlet("/cliente")
 public class ClienteController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -96,7 +96,7 @@ public class ClienteController extends HttpServlet {
 			
 			req.setAttribute("msg", msg);
 
-			List<Cliente> clientes = ClienteDao.listar();
+			List<Cliente> clientes = RegistroDao.listar();
 			req.setAttribute("clientes", clientes);
 			
 			List<Pedido> pedidos = PedidoDao.listar();
