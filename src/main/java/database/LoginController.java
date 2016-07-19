@@ -96,7 +96,7 @@ public class LoginController extends HttpServlet {
 								HttpSession session = req.getSession();
 								//Incluir variável na região de memória da sessão.
 								session.setAttribute("usuario", usuario);				
-								resp.sendRedirect("cliente");				
+								resp.sendRedirect("pedido");				
 							
 							}else {
 							msg = "Usuário ou senha incorreta.";

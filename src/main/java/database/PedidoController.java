@@ -2,7 +2,6 @@ package database;
 
 import java.io.IOException;
 import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,8 +34,8 @@ Apagando todas as linhas da tabela...
 DELETE FROM TABLENAME WHERE 1=1
 */
 
-@WebServlet("/cliente")
-public class ClienteController extends HttpServlet {
+@WebServlet("/pedido")
+public class PedidoController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -53,22 +52,42 @@ public class ClienteController extends HttpServlet {
 		try {
 			String msg = null;
 			String op = valor(req, "operacao", "");
-			//int qtd = toInt(req, "qtd", "0");
-			String usuario = valor(req, "nome", "");
-			String senha = valor(req, "senha", "");
-			String pedido = valor(req, "pedido", "");
-			if (op.equals("incluir")) {
-				ClienteDao.inclui(usuario, senha);
+			
+			//Nada elegante
+			String pedido1 = valor(req, "pedido1", "");
+			String pedido2 = valor(req, "pedido2", "");
+			String pedido3 = valor(req, "pedido3", "");
+			String pedido4 = valor(req, "pedido4", "");
+			String pedido5 = valor(req, "pedido5", "");
+			String pedido6 = valor(req, "pedido6", "");
+			String pedido7 = valor(req, "pedido7", "");
+			String pedido8 = valor(req, "pedido8", "");
+			//Mas não consegui pensar em outra maneira
+			
+			if (op.equals("pedido1")) {
+				PedidoDao.inclui(pedido1);
 				msg = "Inclusão realizada com sucesso.";
-			} else if (op.equals("alterar")) {
-				ClienteDao.alterar(usuario, senha);
-				msg = "Alteração realizada com sucesso.";
-			} else if (op.equals("excluir")) {
-				ClienteDao.excluir(usuario);
-				resp.sendRedirect("cliente");
-				msg = "Exclusão realizada com sucesso.";
-			} else if (op.equals("pedido")){
-				PedidoDao.inclui(pedido);
+			} if (op.equals("pedido2")) {
+				PedidoDao.inclui(pedido2);
+				msg = "Inclusão realizada com sucesso.";
+			} if (op.equals("pedido3")) {
+				PedidoDao.inclui(pedido3);
+				msg = "Inclusão realizada com sucesso.";
+			} if (op.equals("pedido4")) {
+				PedidoDao.inclui(pedido4);
+				msg = "Inclusão realizada com sucesso.";
+			} if (op.equals("pedido5")) {
+				PedidoDao.inclui(pedido5);
+				msg = "Inclusão realizada com sucesso.";
+			} if (op.equals("pedido6")) {
+				PedidoDao.inclui(pedido6);
+				msg = "Inclusão realizada com sucesso.";
+			} if (op.equals("pedido7")) {
+				PedidoDao.inclui(pedido7);
+				msg = "Inclusão realizada com sucesso.";
+			} if (op.equals("pedido8")) {
+				PedidoDao.inclui(pedido8);
+				msg = "Inclusão realizada com sucesso.";
 			} else if (op.equals("")) {
 				msg = "";
 			} else {
@@ -79,6 +98,9 @@ public class ClienteController extends HttpServlet {
 
 			List<Cliente> clientes = ClienteDao.listar();
 			req.setAttribute("clientes", clientes);
+			
+			List<Pedido> pedidos = PedidoDao.listar();
+			req.setAttribute("pedidos", pedidos);				
 			
 			req.getRequestDispatcher("ClienteView.jsp").forward(req, resp);
 		} catch (Exception e) {

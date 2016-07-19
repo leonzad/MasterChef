@@ -30,7 +30,7 @@ public class PedidoDao {
 		// Abrir uma conexão com o banco de dados.
 		Connection conn = DriverManager.getConnection(URL);
 		// Executar instrução SQL.
-		String sql = "select pedido from registro";
+		String sql = "select pedido from pedido";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		// Represneta o resultado da execução.
 		ResultSet rs = pstmt.executeQuery();

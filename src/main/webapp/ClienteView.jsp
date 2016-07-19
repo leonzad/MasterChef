@@ -255,17 +255,6 @@
 										</figcaption>
 									</figure>
 								</li>
-								<li>
-									<figure>
-										<img src="http://wowthemes.net/demo/leroy/img/dummies/17.jpg"
-											alt="" />
-										<figcaption>
-											<h3>Brunch semiotics</h3>
-											<p>Ex disrupt cray yr, butcher pour-over magna umami
-												kitsch before they sold out commodo.</p>
-										</figcaption>
-									</figure>
-								</li>
 							</ul>
 						</section>
 						<!-- // end small images -->
@@ -281,9 +270,8 @@
 												Pinterest elit twee pickled direct trade vero.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="operacao"
-													type="checkbox" value="pedido" id="1" unchecked> <span
-													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
-													esse!
+													type="checkbox" value="pedido1" unchecked> <span
+													class="cr"><i class="cr-icon fa fa-check"></i></span>Pedido 1</input>
 												</label>
 											</div>
 										</figcaption>
@@ -298,7 +286,7 @@
 											<p>Bicycle rights flannel Shoreditch, art party.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="2"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido2" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -316,7 +304,7 @@
 												lonely.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="3"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido3" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -333,7 +321,7 @@
 											<p>Chillwave hoodie ea gentrify aute sriracha consequat.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="4"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido4" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -351,7 +339,7 @@
 												retro 90's chia cardigan quis asymmetrical paleo.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="5"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido5" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -369,7 +357,7 @@
 												kitsch before they sold out commodo.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="6"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido6" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -387,7 +375,7 @@
 												kitsch before they sold out commodo.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="7"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido7" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -405,7 +393,7 @@
 												kitsch before they sold out commodo.</p>
 											<div class="checkbox">
 												<label style="font-size: 2.5em"> <input name="8"
-													type="checkbox" value="on" unchecked> <span
+													type="checkbox" value="pedido8" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span> Quero
 													esse!
 												</label>
@@ -424,16 +412,15 @@
 					</div>
 					<!-- // grid-gallery -->
 				</div>
-				<!--  form class="form-horizontal">
+				<form class="form-horizontal">
 					<fieldset></fieldset>
-				</form-->
+				</form>
 				<div class="span7 text-center">				
-					<button "name="operacao" value="pedido"
-						class="btn btn-danger ">
+					<button "name="operacao" class="btn btn-danger ">
 						<i class="fa fa-user"></i>Enviar pedido
 					</button>				
-					<!-- input type="hidden" name="command" value="create" /> <input
-						type="hidden" name="table" value="2" / -->
+					<!--  input type="hidden" name="operacao" value="pedido4"/> <input
+						type="hidden" name="table" value="2"/-->
 				</div>
 				<!--script type="text/javascript">
                         function form_submit() {
