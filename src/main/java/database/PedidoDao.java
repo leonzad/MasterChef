@@ -16,7 +16,7 @@ public class PedidoDao {
 		// Abrir uma conexão com o banco de dados.
 		Connection conn = DriverManager.getConnection(URL);
 		// Executar instrução SQL.
-		String sql = "insert into pedido (pedido) values ('?')";
+		String sql = "insert into pedido (pedido) values (?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, pedido);
 		pstmt.executeUpdate();

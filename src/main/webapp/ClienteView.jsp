@@ -269,8 +269,7 @@
 											<p>Portland nulla butcher ea XOXO, consequat Bushwick
 												Pinterest elit twee pickled direct trade vero.</p>
 											<div class="checkbox">
-												<label style="font-size: 2.5em"> <input name="operacao"
-													type="checkbox" value="pedido1" unchecked> <span
+												<label style="font-size: 2.5em"> <input name="operacao" type="checkbox" value="pedido1" unchecked> <span
 													class="cr"><i class="cr-icon fa fa-check"></i></span>Pedido 1</input>
 												</label>
 											</div>
