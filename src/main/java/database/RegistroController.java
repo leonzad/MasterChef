@@ -47,7 +47,7 @@ public class RegistroController extends HttpServlet {
 			req.setAttribute("clientes", clientes);	
 			
 			
-			req.getRequestDispatcher("RegistroView2.jsp").forward(req, resp);
+			req.getRequestDispatcher("RegistroView.jsp").forward(req, resp);
 		} catch (Exception e) {
 			e.printStackTrace(resp.getWriter());
 		}

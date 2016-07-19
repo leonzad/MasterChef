@@ -11,15 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /*
 
-create table aluno (
-  matricula int,
-  nome varchar(255)
-)
-
-create table produto(
- qtd int,
- nome varchar(50)
- )
 
 */
 @WebServlet("/listar")

@@ -23,8 +23,6 @@ create table registro (
  
  create table pedido(
   prato varchar(30),
-  preco varchar(15)
-  mesa varchar(10)
   )
  
  insert into registro values('admin','123','gerente')  

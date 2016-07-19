@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter("/*/main")
+@WebFilter("/main")
 public class SegurancaFilter implements Filter {
 	
 	 private static final Set<String> ALLOWED_PATHS = Collections.unmodifiableSet(new HashSet<>(
@@ -49,13 +49,12 @@ public class SegurancaFilter implements Filter {
 		//boolean loginRequest = request.getRequestURI().equals(loginUri);
 
 		//Se estiver logado ou se for a página de login.
-		//if (loggedIn || loginRequest) {
+		
 		if (loggedIn || allowedPath) {
 			//Segue adiante.
 			chain.doFilter(request, response);
 		} else {
 			//Redireciona para o login.
-			//response.sendRedirect(loginUri);
 			response.sendRedirect(request.getContextPath() + "/main");
 		}
 	}	
