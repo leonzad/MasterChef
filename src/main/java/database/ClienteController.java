@@ -22,7 +22,7 @@ create table registro (
  )
  
  create table pedido(
-  prato varchar(30),
+   pedido varchar(30)
   )
  
  insert into registro values('admin','123','gerente')  
@@ -65,29 +65,29 @@ public class ClienteController extends HttpServlet {
 			if (op.equals("pedido1")) {
 				PedidoDao.inclui(pedido1);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido2")) {
+			}else if (op.equals("pedido2")) {
 				PedidoDao.inclui(pedido2);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido3")) {
+			}else if (op.equals("pedido3")) {
 				PedidoDao.inclui(pedido3);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido4")) {
+			}else if (op.equals("pedido4")) {
 				PedidoDao.inclui(pedido4);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido5")) {
+			}else if (op.equals("pedido5")) {
 				PedidoDao.inclui(pedido5);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido6")) {
+			} else if (op.equals("pedido6")) {
 				PedidoDao.inclui(pedido6);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido7")) {
+			}else if (op.equals("pedido7")) {
 				PedidoDao.inclui(pedido7);
 				msg = "Inclusão realizada com sucesso.";
-			} if (op.equals("pedido8")) {
+			}else if (op.equals("pedido8")) {
 				PedidoDao.inclui(pedido8);
 				msg = "Inclusão realizada com sucesso.";
 			} else if (op.equals("")) {
-				msg = "";
+				msg = "Testeerror";
 			} else {
 				throw new IllegalArgumentException("Operação \"" + op + "\" não suportada.");
 			}

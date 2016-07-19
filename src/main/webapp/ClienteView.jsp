@@ -110,7 +110,7 @@
 										<div class="navbar-collapse collapse">
 											<ul class="nav navbar-nav">
 												<li class="menuItem active"><a href="#wrapper">Home</a></li>
-												<li class="menuItem"><a href="#gallery">Nossas Delícias</a></li>
+												<li class="menuItem"><a href="#gallery">Nossas Del�cias</a></li>
 												<li class="menuItem"><a href="logout">Logout</a></li>
 											</ul>
 										</div>
@@ -429,38 +429,6 @@
                      </script-->
 			</section>
 		</form>
-		<div class="modal fade login" id="sairModal">
-			<div class="modal-dialog login animated">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
-						<h4 class="modal-title">Você realmente quer sair? :/</h4>
-					</div>
-					<div class="modal-body">
-						<div class="box">
-							<div class="content">
-								<div class="error"></div>
-								<div class="form loginBox">
-									<form method="get">
-										<div class="btn-group">
-											<button class="btn btn-danger">Sair</button>
-											<input type="hidden" name="command" value="logout" />
-											<button class="btn btn-success " data-dismiss="modal">Ficar
-												:)</button>
-									</form>
-									<script type="text/javascript">
-                                             function form_submit() {
-                                               document.getElementById("sair").submit();
-                                              }    
-                                          </script>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 	<!--footer-->
 	<section class="footer" id="footer">

@@ -16,7 +16,7 @@ public class PedidoDao {
 		// Abrir uma conexão com o banco de dados.
 		Connection conn = DriverManager.getConnection(URL);
 		// Executar instrução SQL.
-		String sql = "insert into pedido (pedido) values (?)";
+		String sql = "insert into pedido (pedido) values ('?')";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, pedido);
 		pstmt.executeUpdate();
@@ -32,7 +32,7 @@ public class PedidoDao {
 		// Executar instrução SQL.
 		String sql = "select pedido from pedido";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		// Represneta o resultado da execução.
+		// Representa o resultado da execução.
 		ResultSet rs = pstmt.executeQuery();
 		
 		List<Pedido> pedidos = new ArrayList<>();

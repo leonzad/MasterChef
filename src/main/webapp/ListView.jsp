@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
    pageEncoding="utf-8" %>
-    <%@page import="database.Cliente"%>
+<%@page import="database.Cliente"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> 
